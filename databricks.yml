@@ -2,13 +2,17 @@
 bundle:
   name: az_demo
 
+
 variables:
   experiment_name:
     description: Experiment name for the model training.
-    default: /Users/${workspace.current_user.userName}/${bundle.target}-az-demo-experiment
+    default: /Users/${workspace.current_user.userName}/${bundle.target}_azdemo_experiment
   model_name:
     description: Model name for the model training.
-    default: az-demo-model
+    default: az_demo_model
+  catalog_name:
+    description: Catalog Name to use.
+    default: mlops_pj
 
 include:
   # Resources folder contains ML artifact resources for the ml project that defines model and experiment

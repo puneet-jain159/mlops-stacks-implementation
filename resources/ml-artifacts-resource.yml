@@ -48,8 +48,8 @@ resources:
   registered_models:
       model:
         name: ${var.model_name}
-        catalog_name: ${bundle.target}
-        schema_name: mlops-example     
+        catalog_name: ${var.catalog_name}
+        schema_name: ${bundle.target}_mlops_example     
         <<: *grants
         depends_on:
           - resources.jobs.model_training_job.id

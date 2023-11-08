@@ -2,7 +2,7 @@ new_cluster: &new_cluster
   new_cluster:
     num_workers: 3
     spark_version: 13.3.x-cpu-ml-scala2.12
-    node_type_id: i3.xlarge
+    node_type_id: Standard_DS3_v2
     custom_tags:
       clusterSource: mlops-stack/0.2
 
@@ -28,9 +28,9 @@ resources:
               # TODO: Update training_data_path
               training_data_path: /databricks-datasets/nyctaxi-with-zipcodes/subsampled
               experiment_name: ${var.experiment_name}
-              model_name: ${bundle.target}.mlops-example.${var.model_name}
-              pickup_features_table: ${bundle.target}.mlops-example.trip_pickup_features
-              dropoff_features_table: ${bundle.target}.mlops-example.trip_dropoff_features
+              model_name: ${var.catalog_name}.${bundle.target}_mlops_example.${var.model_name}
+              pickup_features_table: ${var.catalog_name}.${bundle.target}_mlops_example.trip_pickup_features
+              dropoff_features_table: ${var.catalog_name}.${bundle.target}_mlops_example.trip_dropoff_features
               # git source information of current ML resource deployment. It will be persisted as part of the workflow run
               git_source_info: url:${bundle.git.origin_url}; branch:${bundle.git.branch}; commit:${bundle.git.commit}
         - task_key: ModelValidation
