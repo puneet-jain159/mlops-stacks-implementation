@@ -3,9 +3,7 @@ on:
   workflow_dispatch:
   pull_request:
 
-defaults:
-  run:
-    working-directory: ./az_demo/
+
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.STAGING_WORKSPACE_TOKEN }}

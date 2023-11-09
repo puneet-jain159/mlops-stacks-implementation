@@ -10,9 +10,6 @@ on:
       - 'release'
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: ./az_demo
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.PROD_WORKSPACE_TOKEN }}

@@ -10,9 +10,7 @@ on:
       - 'main'
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: ./az_demo
+
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.STAGING_WORKSPACE_TOKEN }}
