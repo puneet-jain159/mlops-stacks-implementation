@@ -34,7 +34,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const fileContents = fs.readFileSync('validate_output.txt', 'utf8');
+            const fileContents = fs.readFileSync('./validate_output.txt', 'utf8');
             const output = `#### Bundle Staging Config Validated 🖌
             <details><summary>Staging Validation Output</summary>
 
@@ -72,7 +72,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const fileContents = fs.readFileSync('validate_output.txt', 'utf8');
+            const fileContents = fs.readFileSync('./validate_output.txt', 'utf8');
             const output = `#### Bundle Prod Config Validated 🖌
             <details><summary>Prod Validation Output</summary>
 
