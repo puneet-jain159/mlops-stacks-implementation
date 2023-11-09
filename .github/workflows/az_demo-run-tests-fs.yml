@@ -3,8 +3,6 @@ on:
   workflow_dispatch:
   pull_request:
 
-
-
 env:
   DATABRICKS_TOKEN: ${{ secrets.STAGING_WORKSPACE_TOKEN }}
 
