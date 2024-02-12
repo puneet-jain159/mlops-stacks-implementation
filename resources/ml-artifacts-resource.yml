@@ -2,6 +2,7 @@
 targets:
   dev:
     resources:
+    
       registered_models:
         model:
           comment: Registered model in Unity Catalog for the "az_demo" ML Project for ${bundle.target} deployment target.
